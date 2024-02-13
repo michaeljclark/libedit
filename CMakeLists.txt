@@ -105,7 +105,7 @@ if(WIN32)
 endif()
 
 #
-# compat pdcurses
+# compat pdcurses and terminfo
 #
 if(WIN32)
     include_directories(compat/pdcurses/include)
@@ -113,6 +113,11 @@ if(WIN32)
     add_library(pdcurses STATIC ${pdcurses_source})
     install(TARGETS pdcurses DESTINATION lib EXPORT edit-targets)
     list(APPEND libedit_extra_libs pdcurses)
+
+    file(GLOB terminfo_source compat/terminfo/*.c)
+    add_library(terminfo STATIC ${terminfo_source})
+    install(TARGETS terminfo DESTINATION lib EXPORT edit-targets)
+    list(APPEND libedit_extra_libs terminfo)
 else()
     list(APPEND libedit_extra_libs ncurses)
 endif()

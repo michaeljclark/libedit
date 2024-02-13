@@ -11,11 +11,9 @@ This port of libedit bundles the following dependencies:
 
 - Public Domain Curses (Modified), aka PDCursesMod, an
   X/Open curses implementation.
+- terminfo implementation using the NetBSD tparm implementation.
 - BSD compatibility layer for Win32 from openssh-portable.
 - BSD regex implementation.
-
-PDCursesMod on Windows does not support termcap so advanced
-line editing functionality is not supported.
 
 ## Building
 

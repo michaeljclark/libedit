@@ -145,6 +145,7 @@ int setupterm(const char *term, int filedes, int *errret)
     return ERR;
 }
 
+#if 0
 int tgetent(char *bp, const char *name)
 {
     PDC_LOG(("tgetent() - called: name %s\n", name));
@@ -188,6 +189,7 @@ char *tgoto(const char *cap, int col, int row)
     INTENTIONALLY_UNUSED_PARAMETER( row);
     return (char *)NULL;
 }
+#endif
 
 int tigetflag(const char *capname)
 {
@@ -213,6 +215,7 @@ char *tigetstr(const char *capname)
     return (char *)(-1);
 }
 
+#if 0
 char *tparm(const char *cap, long p1, long p2, long p3, long p4,
             long p5, long p6, long p7, long p8, long p9)
 {
@@ -240,3 +243,4 @@ int tputs(const char *str, int affcnt, int (*putfunc)(int))
     INTENTIONALLY_UNUSED_PARAMETER( putfunc);
     return ERR;
 }
+#endif
