@@ -19,8 +19,7 @@ This port of libedit bundles the following dependencies:
 
 ### Supported Platforms
 
-- Microsoft Windows
-- Linux
+- Windows, Linux, macOS, FreeBSD
 
 ### Building on Linux
 

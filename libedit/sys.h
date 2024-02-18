@@ -40,9 +40,9 @@
 #ifndef _h_sys
 #define	_h_sys
 
-#ifdef WIN32
+#if defined WIN32
 #define alloca _alloca
-#else
+#elif defined __linux__
 #include <alloca.h>
 #endif
 

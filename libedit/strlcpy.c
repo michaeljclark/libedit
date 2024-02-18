@@ -16,6 +16,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#if defined WIN32 || defined __linux__
 #include <sys/types.h>
 #include <string.h>
 
@@ -48,3 +49,4 @@ strlcpy(char * __restrict dst, const char * __restrict src, size_t dsize)
 
 	return(src - osrc - 1);	/* count does not include NUL */
 }
+#endif
